@@ -6,6 +6,15 @@ type PublicationLinkIconProps = {
 }
 
 function PublicationLinkIcon({ label }: PublicationLinkIconProps) {
+  const logoLinks: Record<string, { src: string; className: string }> = {
+    arxiv: { src: "/logos/arxiv.svg", className: "publication-link-image--arxiv" },
+    software: { src: "/logos/pypi.svg", className: "publication-link-image--pip" },
+    huggingface: {
+      src: "/logos/huggingface.svg",
+      className: "publication-link-image--huggingface",
+    },
+  }
+
   if (label === "code") {
     return (
       <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
@@ -14,28 +23,27 @@ function PublicationLinkIcon({ label }: PublicationLinkIconProps) {
     )
   }
 
-  if (label === "arxiv") {
-    return <span className="publication-link-logo publication-link-logo--arxiv">arXiv</span>
-  }
-
-  if (label === "software") {
-    return <span className="publication-link-logo publication-link-logo--pip">pip</span>
-  }
-
-  if (label === "huggingface") {
-    return <span className="publication-link-logo publication-link-logo--hf">HF</span>
+  const logo = logoLinks[label]
+  if (logo) {
+    return (
+      <img
+        className={`publication-link-image ${logo.className}`}
+        src={logo.src}
+        alt=""
+        aria-hidden="true"
+      />
+    )
   }
 
   return <span className="publication-link-logo">{label}</span>
 }
 
 function renderAuthors(authors: string) {
-  const parts = authors.split("Lin Zhu")
+  const parts = authors.split(/(Lin Zhu\*?)/g)
 
   return parts.map((part, index) => (
     <span key={part + "-" + index}>
-      {part}
-      {index < parts.length - 1 ? <strong>Lin Zhu</strong> : null}
+      {part.startsWith("Lin Zhu") ? <strong>{part}</strong> : part}
     </span>
   ))
 }
@@ -69,36 +77,35 @@ export function Publications() {
             <h3 className="publication-subheading">{section.title}</h3>
             {section.papers.length > 0 ? (
               <ul className="publication-list">
-                {section.papers.map((paper) => (
+                {section.papers.map((paper, paperIndex) => (
                   <li className="publication" key={paper.title}>
-                    <p className="publication__title">
-                      {paper.titleHref ? (
-                        <a href={paper.titleHref} target="_blank" rel="noreferrer">
-                          {paper.title}
-                        </a>
-                      ) : (
-                        paper.title
-                      )}
-                      {paper.links?.length ? (
-                        <span className="publication__links">
-                          {paper.links.map((link) => (
-                            <a
-                              key={link.label}
-                              className="publication__link"
-                              href={link.href}
-                              target="_blank"
-                              rel="noreferrer"
-                              aria-label={getLinkTitle(link.label)}
-                              title={getLinkTitle(link.label)}
-                            >
-                              <PublicationLinkIcon label={link.label} />
-                            </a>
-                          ))}
-                        </span>
-                      ) : null}
-                    </p>
-                    <p className="publication__authors">{renderAuthors(paper.authors)}</p>
-                    {paper.venue ? <p className="publication__venue">{paper.venue}</p> : null}
+                    <div className="publication__row">
+                      <span className="publication__number">[{paperIndex + 1}]</span>
+                      <div className="publication__body">
+                        <p className="publication__title">
+                          <span className="publication__title-text">{paper.title}</span>
+                          {paper.links?.length ? (
+                            <span className="publication__links">
+                              {paper.links.map((link) => (
+                                <a
+                                  key={link.label}
+                                  className="publication__link"
+                                  href={link.href}
+                                  target="_blank"
+                                  rel="noreferrer"
+                                  aria-label={getLinkTitle(link.label)}
+                                  title={getLinkTitle(link.label)}
+                                >
+                                  <PublicationLinkIcon label={link.label} />
+                                </a>
+                              ))}
+                            </span>
+                          ) : null}
+                        </p>
+                        <p className="publication__authors">{renderAuthors(paper.authors)}</p>
+                        {paper.venue ? <p className="publication__venue">{paper.venue}</p> : null}
+                      </div>
+                    </div>
                   </li>
                 ))}
               </ul>

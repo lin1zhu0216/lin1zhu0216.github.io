@@ -20,7 +20,7 @@ export const profile = {
   ],
   bio: [
     'Hello! I\'m Lin Zhu (朱林), a Ph.D. student at Aalto University and a member of TAC Lab, focusing on Trustworthy AI under the supervision of Asst. Prof. Sebastian Szyller.',
-    'We study security and explainability issues in LLMs, VLMs, and agentic systems, while also exploring vulnerabilities that emerge during deployment.',
-    'I am interested in understanding how AI models work and in developing trustworthy AI systems. Before, I did my M.Sc. at DTU, where I worked on topics related to counterfactual explanations and feature attribution under the supervision of Asst. Prof. Lei You.'
+    'I am interested in understanding how AI models work and in developing trustworthy AI systems. We study security and explainability issues in LLMs, VLMs, and agentic systems, while also exploring vulnerabilities that emerge during deployment.',
+    'Before that, I did my M.Sc. at DTU, where I worked on topics related to counterfactual explanations and feature attribution under the supervision of Asst. Prof. Lei You.'
   ],
 }

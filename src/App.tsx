@@ -4,6 +4,7 @@ import { NavBar } from './components/NavBar'
 import { News } from './components/News'
 import { ProfileIntro } from './components/ProfileIntro'
 import { Publications } from './components/Publications'
+import { VisitorMap } from './components/VisitorMap'
 import './App.css'
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <News />
         <Education />
         <Publications />
+        <VisitorMap />
       </main>
       <Footer />
     </>

@@ -48,9 +48,9 @@
 
 .profile-intro {
   display: grid;
-  grid-template-columns: 340px minmax(0, 1fr);
+  grid-template-columns: 355px minmax(0, 1fr);
   gap: 44px;
-  align-items: start;
+  align-items: end;
 }
 
 .profile-card {
@@ -61,7 +61,7 @@
 
 .profile-photo {
   display: block;
-  width: 330px;
+  width: 345px;
   max-width: 100%;
   aspect-ratio: 4 / 3;
   border: 1px solid #d8ddda;
@@ -414,11 +414,13 @@
   .profile-intro {
     grid-template-columns: 1fr;
     gap: 28px;
+    align-items: start;
   }
 
   .profile-photo {
-    width: min(330px, 100%);
+    width: min(345px, 100%);
   }
+
 
   .news-item,
   .education-item__header {

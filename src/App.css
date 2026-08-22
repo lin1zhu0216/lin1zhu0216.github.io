@@ -121,6 +121,11 @@
   line-height: 1.68;
 }
 
+.bio__body strong {
+  color: #2f3533;
+  font-weight: 780;
+}
+
 .bio__body a,
 .news-item__text a,
 .publication__links a {

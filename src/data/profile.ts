@@ -11,12 +11,16 @@ export const profile = {
     },
   ],
   bioLinks: [
+    { label: 'TAC Lab', href: 'https://taclab.aalto.fi/' },
     { label: 'Sebastian Szyller', href: 'https://sebszyller.com/' },
     { label: 'Lei You', href: 'https://www.leiyou.me/' },
   ],
+  bioHighlights: [
+    'understanding how AI models work and in developing trustworthy AI systems',
+  ],
   bio: [
-    'I am a Ph.D. student at Aalto University, focusing on Trustworthy AI under the supervision of Asst. Prof. Sebastian Szyller.',
-    'I am interested in understanding how AI models work and in developing trustworthy AI systems. Before, I received my M.Sc. from DTU, where I worked on explainable AI and fairness under the supervision of Asst. Prof. Lei You.',
-    'As I am still familiarizing myself with the broader landscape of Trustworthy AI, I am currently in an exploration phase and hope to identify a direction where I can pursue meaningful questions and contribute valuable research.',
+    'Hello! I\'m Lin Zhu (朱林), a Ph.D. student at Aalto University and a member of TAC Lab, focusing on Trustworthy AI under the supervision of Asst. Prof. Sebastian Szyller.',
+    'We study security and explainability issues in LLMs, VLMs, and agentic systems, while also exploring vulnerabilities that emerge during deployment.',
+    'I am interested in understanding how AI models work and in developing trustworthy AI systems. Before, I did my M.Sc. at DTU, where I worked on topics related to counterfactual explanations and feature attribution under the supervision of Asst. Prof. Lei You.'
   ],
 }

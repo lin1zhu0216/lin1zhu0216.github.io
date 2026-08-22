@@ -29,43 +29,64 @@ function SocialIcon({ label }: SocialIconProps) {
 }
 
 type BioLink = (typeof profile.bioLinks)[number]
-type BioSegment = string | BioLink
+type BioHighlight = { text: (typeof profile.bioHighlights)[number] }
+type BioSegment = string | BioLink | BioHighlight
+
+function splitBioSegment(segment: BioSegment, text: string, replacement: BioSegment) {
+  if (typeof segment !== "string") {
+    return [segment]
+  }
+
+  const splitText = segment.split(text)
+
+  if (splitText.length === 1) {
+    return [segment]
+  }
+
+  return splitText.flatMap((part, index) =>
+    index === splitText.length - 1 ? [part] : [part, replacement],
+  )
+}
+
+function isBioLink(segment: BioSegment): segment is BioLink {
+  return typeof segment !== "string" && "href" in segment
+}
 
 function renderBioParagraph(paragraph: string) {
-  const segments = profile.bioLinks.reduce<BioSegment[]>(
-    (currentSegments, link) =>
-      currentSegments.flatMap((segment) => {
-        if (typeof segment !== "string") {
-          return [segment]
-        }
-
-        const splitText = segment.split(link.label)
-
-        if (splitText.length === 1) {
-          return [segment]
-        }
-
-        return splitText.flatMap((text, index) =>
-          index === splitText.length - 1 ? [text] : [text, link],
-        )
-      }),
+  const linkedSegments = profile.bioLinks.reduce<BioSegment[]>(
+    (segments, link) =>
+      segments.flatMap((segment) => splitBioSegment(segment, link.label, link)),
     [paragraph],
   )
 
-  return segments.map((segment, index) =>
-    typeof segment === "string" ? (
-      segment
-    ) : (
-      <a
-        key={segment.label + "-" + index}
-        href={segment.href}
-        target="_blank"
-        rel="noreferrer"
-      >
-        {segment.label}
-      </a>
-    ),
+  const highlightedSegments = profile.bioHighlights.reduce<BioSegment[]>(
+    (segments, highlight) =>
+      segments.flatMap((segment) =>
+        splitBioSegment(segment, highlight, { text: highlight }),
+      ),
+    linkedSegments,
   )
+
+  return highlightedSegments.map((segment, index) => {
+    if (typeof segment === "string") {
+      return segment
+    }
+
+    if (isBioLink(segment)) {
+      return (
+        <a
+          key={segment.label + "-" + index}
+          href={segment.href}
+          target="_blank"
+          rel="noreferrer"
+        >
+          {segment.label}
+        </a>
+      )
+    }
+
+    return <strong key={segment.text + "-" + index}>{segment.text}</strong>
+  })
 }
 
 export function ProfileIntro() {

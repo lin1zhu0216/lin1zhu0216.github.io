@@ -244,12 +244,12 @@
 }
 
 .publication {
-  padding: 6px 0;
+  padding: 4px 0;
   border-top: 1px solid #edf0ee;
 }
 
 .publication:first-child {
-  padding-top: 4px;
+  padding-top: 3px;
 }
 
 .publication__row {

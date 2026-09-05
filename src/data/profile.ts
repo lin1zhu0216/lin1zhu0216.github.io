@@ -16,11 +16,11 @@ export const profile = {
     { label: 'Lei You', href: 'https://www.leiyou.me/' },
   ],
   bioHighlights: [
-    'bridging explainability and AI safety, using a post-hoc perspective to understand how AI systems work and build trustworthy AI',
+    'bridging XAI and AI safety, using a post-hoc perspective to understand how AI systems work and build trustworthy AI',
   ],
   bio: [
     'Hello! I\'m Lin Zhu (朱林), a Ph.D. student at Aalto University and a member of TAC Lab, focusing on Trustworthy AI under the supervision of Asst. Prof. Sebastian Szyller.',
-    'I am interested in bridging explainability and AI safety, using a post-hoc perspective to understand how AI systems work and build trustworthy AI. We study security and explainability issues in LLMs, VLMs, and agentic systems, while also exploring vulnerabilities that emerge during deployment.',
+    'I\'m interested in bridging XAI and AI safety, using a post-hoc perspective to understand how AI systems work and build trustworthy AI. We study security and explainability issues in LLMs, VLMs, and agentic systems, while also exploring vulnerabilities that emerge during deployment.',
     'Before that, I completed my master\'s degree at DTU, where I worked on topics related to counterfactual explanations and feature attribution under the supervision of Asst. Prof. Lei You.'
   ],
 }

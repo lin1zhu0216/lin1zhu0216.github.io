@@ -24,6 +24,16 @@ export const publicationSections: PublicationSection[] = [
           { label: "code", href: "https://github.com/ZhuMuMu0216/FairSHAP" },
         ],
       },
+      {
+        authors: "Cenwei Zhang*, Lin Zhu*, Manxi Lin, Lei You",
+        title: "From Baselines to Transport Geodesics: Axiomatic Attribution via Optimal Generative Flows",
+        venue:
+          "The 40th Annual Conference on Neural Information Processing Systems (NeurIPS 2026)",
+        links: [
+          { label: "code", href: "https://github.com/cenweizhang/OTFlowSHAP" },
+          { label: "huggingface", href: "https://huggingface.co/" },
+        ],
+      },
     ],
   },
   {
@@ -34,15 +44,6 @@ export const publicationSections: PublicationSection[] = [
         title: "How Context Attribution Handles What the Model Already Knows",
         links: [
           { label: "arxiv", href: "https://arxiv.org/abs/2607.23804" },
-        ],
-      },
-      {
-        authors: "Cenwei Zhang*, Lin Zhu*, Manxi Lin, Lei You",
-        title: "From Baselines to Transport Geodesics: Axiomatic Attribution via Optimal Generative Flows",
-        links: [
-          { label: "arxiv", href: "https://arxiv.org/abs/2603.05093" },
-          { label: "code", href: "https://github.com/cenweizhang/OTFlowSHAP" },
-          { label: "huggingface", href: "https://huggingface.co/" },
         ],
       },
       {

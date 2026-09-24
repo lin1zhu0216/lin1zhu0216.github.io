@@ -11,6 +11,10 @@ export type NewsItem = {
 
 export const news: NewsItem[] = [
   {
+    date: "Sep 2026",
+    text: "One of my papers has been accepted to NeurIPS 2026.",
+  },
+  {
     date: "Mar 2026",
     text: "Joined Aalto University and TAC Lab as a Doctoral Student, supervised by Asst. Prof. Sebastian Szyller.",
     links: [

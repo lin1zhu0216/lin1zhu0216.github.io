@@ -28,7 +28,7 @@ export const publicationSections: PublicationSection[] = [
         authors: "Cenwei Zhang*, Lin Zhu*, Manxi Lin, Lei You",
         title: "From Baselines to Transport Geodesics: Axiomatic Attribution via Optimal Generative Flows",
         venue:
-          "The 40th Annual Conference on Neural Information Processing Systems (NeurIPS 2026)",
+          "The 40th Annual Conference on Neural Information Processing Systems (NeurIPS 26')",
         links: [
           { label: "code", href: "https://github.com/cenweizhang/OTFlowSHAP" },
           { label: "huggingface", href: "https://huggingface.co/" },

@@ -291,7 +291,8 @@
 .publication__authors {
   margin: 0 0 4px;
   color: #58615d;
-  font-size: 0.88rem;
+  font-family: Arial, sans-serif;
+  font-size: 0.82rem;
   line-height: 1.52;
 }
 
@@ -303,8 +304,8 @@
 .publication__venue {
   margin: 0;
   color: #38413d;
-  font-family: ui-rounded, "Avenir Next Rounded", "Nunito", Inter, ui-sans-serif, system-ui, sans-serif;
-  font-size: 0.9rem;
+  font-family: Arial, sans-serif;
+  font-size: 0.84rem;
   font-weight: 770;
   line-height: 1.5;
 }

@@ -30,6 +30,7 @@ export const publicationSections: PublicationSection[] = [
         venue:
           "The 40th Annual Conference on Neural Information Processing Systems (NeurIPS 26')",
         links: [
+          { label: "arxiv", href: "https://arxiv.org/abs/2603.05093" },
           { label: "code", href: "https://github.com/cenweizhang/OTFlowSHAP" },
           { label: "huggingface", href: "https://huggingface.co/" },
         ],

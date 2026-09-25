@@ -12,7 +12,7 @@ export type NewsItem = {
 export const news: NewsItem[] = [
   {
     date: "Sep 2026",
-    text: "My final work from my master's study has been accepted to NeurIPS 26'. This work investigates whether combining generative models with Shapley values can reduce baseline sensitivity and lead to more faithful feature attribution.",
+    text: "My final work from my master's study has been accepted to NeurIPS 26'. This work combines generative models with Shapley values to reduce baseline sensitivity and lead to more faithful feature attribution.",
   },
   {
     date: "Mar 2026",

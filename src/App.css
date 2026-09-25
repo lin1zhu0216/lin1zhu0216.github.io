@@ -244,6 +244,14 @@
   gap: 0;
 }
 
+.publication-empty {
+  margin: 4px 0 0;
+  color: #737d79;
+  font-family: Arial, sans-serif;
+  font-size: 0.86rem;
+  line-height: 1.45;
+}
+
 .publication {
   position: relative;
   padding: 9px 0;

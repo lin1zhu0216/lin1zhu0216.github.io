@@ -108,6 +108,8 @@ export function Publications() {
                   </li>
                 ))}
               </ul>
+            ) : section.emptyText ? (
+              <p className="publication-empty">{section.emptyText}</p>
             ) : null}
           </div>
         ))}

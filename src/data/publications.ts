@@ -8,11 +8,12 @@ export type Publication = {
 type PublicationSection = {
   title: string
   papers: Publication[]
+  emptyText?: string
 }
 
 export const publicationSections: PublicationSection[] = [
   {
-    title: "Feature Attribution & XAI",
+    title: "XAI & Feature Attribution",
     papers: [
       {
         authors: "Quoc-Huy Trinh*, Lin Zhu*, Sebastian Szyller",
@@ -54,7 +55,8 @@ export const publicationSections: PublicationSection[] = [
     ],
   },
   {
-    title: "AI Safety",
+    title: "AI Safety & Security",
     papers: [],
+    emptyText: "To be announced.",
   },
 ]

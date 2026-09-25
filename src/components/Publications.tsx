@@ -77,10 +77,9 @@ export function Publications() {
             <h3 className="publication-subheading">{section.title}</h3>
             {section.papers.length > 0 ? (
               <ul className="publication-list">
-                {section.papers.map((paper, paperIndex) => (
+                {section.papers.map((paper) => (
                   <li className="publication" key={paper.title}>
                     <div className="publication__row">
-                      <span className="publication__number">[{paperIndex + 1}]</span>
                       <div className="publication__body">
                         <p className="publication__title">
                           <span className="publication__title-text">{paper.title}</span>

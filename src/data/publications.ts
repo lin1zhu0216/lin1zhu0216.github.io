@@ -12,7 +12,7 @@ type PublicationSection = {
 
 export const publicationSections: PublicationSection[] = [
   {
-    title: "[Accepted]",
+    title: "Feature Attribution & XAI",
     papers: [
       {
         authors: "Lin Zhu*, Yijun Bian*, Lei You",
@@ -35,11 +35,6 @@ export const publicationSections: PublicationSection[] = [
           { label: "huggingface", href: "https://huggingface.co/" },
         ],
       },
-    ],
-  },
-  {
-    title: "[Preprint]",
-    papers: [
       {
         authors: "Quoc-Huy Trinh*, Lin Zhu*, Sebastian Szyller",
         title: "How Context Attribution Handles What the Model Already Knows",
@@ -57,5 +52,9 @@ export const publicationSections: PublicationSection[] = [
         ],
       },
     ],
+  },
+  {
+    title: "AI Safety",
+    papers: [],
   },
 ]

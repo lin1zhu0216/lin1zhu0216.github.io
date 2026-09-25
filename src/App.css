@@ -228,14 +228,15 @@
 
 .publication-sections {
   display: grid;
-  gap: 30px;
+  gap: 28px;
 }
 
 .publication-subheading {
-  margin: 0 0 2px;
-  color: #424846;
-  font-size: 1.22rem;
-  font-weight: 740;
+  margin: 0 0 8px;
+  color: #26312d;
+  font-family: "Avenir Next", Arial, Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.12rem;
+  font-weight: 760;
   line-height: 1.35;
 }
 
@@ -253,10 +254,7 @@
 }
 
 .publication__row {
-  display: grid;
-  grid-template-columns: 34px minmax(0, 1fr);
-  column-gap: 6px;
-  align-items: baseline;
+  display: block;
 }
 
 .publication__body {
@@ -272,13 +270,6 @@
   color: #2f3533;
   font-size: 1.02rem;
   font-weight: 750;
-  line-height: 1.36;
-}
-
-.publication__number {
-  color: #626c67;
-  font-size: 1.02rem;
-  font-weight: 760;
   line-height: 1.36;
 }
 
@@ -451,10 +442,6 @@
   .education-item__header {
     grid-template-columns: 1fr;
     gap: 2px;
-  }
-
-  .publication__row {
-    grid-template-columns: 30px minmax(0, 1fr);
   }
 
   .publication__title {

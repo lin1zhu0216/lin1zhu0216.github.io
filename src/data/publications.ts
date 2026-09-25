@@ -15,13 +15,10 @@ export const publicationSections: PublicationSection[] = [
     title: "Feature Attribution & XAI",
     papers: [
       {
-        authors: "Lin Zhu*, Yijun Bian*, Lei You",
-        title: "FairSHAP: Preprocessing for Fairness Through Attribution-Based Data Augmentation",
-        venue:
-          "The 29th International Conference on Artificial Intelligence and Statistics (AISTATS 26')",
+        authors: "Quoc-Huy Trinh*, Lin Zhu*, Sebastian Szyller",
+        title: "How Context Attribution Handles What the Model Already Knows",
         links: [
-          { label: "arxiv", href: "https://arxiv.org/abs/2505.11111" },
-          { label: "code", href: "https://github.com/ZhuMuMu0216/FairSHAP" },
+          { label: "arxiv", href: "https://arxiv.org/abs/2607.23804" },
         ],
       },
       {
@@ -36,10 +33,13 @@ export const publicationSections: PublicationSection[] = [
         ],
       },
       {
-        authors: "Quoc-Huy Trinh*, Lin Zhu*, Sebastian Szyller",
-        title: "How Context Attribution Handles What the Model Already Knows",
+        authors: "Lin Zhu*, Yijun Bian*, Lei You",
+        title: "FairSHAP: Preprocessing for Fairness Through Attribution-Based Data Augmentation",
+        venue:
+          "The 29th International Conference on Artificial Intelligence and Statistics (AISTATS 26')",
         links: [
-          { label: "arxiv", href: "https://arxiv.org/abs/2607.23804" },
+          { label: "arxiv", href: "https://arxiv.org/abs/2505.11111" },
+          { label: "code", href: "https://github.com/ZhuMuMu0216/FairSHAP" },
         ],
       },
       {

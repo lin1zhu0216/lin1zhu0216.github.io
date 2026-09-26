@@ -84,8 +84,8 @@ function renderVenue(venue: string) {
 
 export function Publications() {
   return (
-    <Section id="publications" mark="" title="Publications (*)">
-      <p className="publication-note">* means equal first author.</p>
+    <Section id="publications" mark="" title="Publications">
+      <p className="publication-note">(* means equal first author.)</p>
       <div className="publication-sections">
         {publicationSections.map((section) => (
           <div className="publication-subsection" key={section.title}>

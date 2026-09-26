@@ -26,7 +26,7 @@ export const publicationSections: PublicationSection[] = [
         authors: "Cenwei Zhang*, Lin Zhu*, Manxi Lin, Lei You",
         title: "From Baselines to Transport Geodesics: Axiomatic Attribution via Optimal Generative Flows",
         venue:
-          "The 40th Annual Conference on Neural Information Processing Systems (NeurIPS 26')",
+          "The 40th Annual Conference on Neural Information Processing Systems (NeurIPS) 2026.",
         links: [
           { label: "arxiv", href: "https://arxiv.org/abs/2603.05093" },
           { label: "code", href: "https://github.com/cenweizhang/OTFlowSHAP" },
@@ -37,7 +37,7 @@ export const publicationSections: PublicationSection[] = [
         authors: "Lin Zhu*, Yijun Bian*, Lei You",
         title: "FairSHAP: Preprocessing for Fairness Through Attribution-Based Data Augmentation",
         venue:
-          "The 29th International Conference on Artificial Intelligence and Statistics (AISTATS 26')",
+          "The 29th International Conference on Artificial Intelligence and Statistics (AISTATS) 2026.",
         links: [
           { label: "arxiv", href: "https://arxiv.org/abs/2505.11111" },
           { label: "code", href: "https://github.com/ZhuMuMu0216/FairSHAP" },

@@ -68,9 +68,24 @@ function getLinkTitle(label: string) {
   return label
 }
 
+function renderVenue(venue: string) {
+  const parts = venue.split(/(NeurIPS|AISTATS)/g)
+
+  return parts.map((part, index) =>
+    part === "NeurIPS" || part === "AISTATS" ? (
+      <span className="publication__venue-acronym" key={part + "-" + index}>
+        {part}
+      </span>
+    ) : (
+      part
+    ),
+  )
+}
+
 export function Publications() {
   return (
-    <Section id="publications" mark="" title="Publications">
+    <Section id="publications" mark="" title="Publications (*)">
+      <p className="publication-note">* means equal first author.</p>
       <div className="publication-sections">
         {publicationSections.map((section) => (
           <div className="publication-subsection" key={section.title}>
@@ -102,7 +117,9 @@ export function Publications() {
                           ) : null}
                         </p>
                         <p className="publication__authors">{renderAuthors(paper.authors)}</p>
-                        {paper.venue ? <p className="publication__venue">{paper.venue}</p> : null}
+                        {paper.venue ? (
+                          <p className="publication__venue">{renderVenue(paper.venue)}</p>
+                        ) : null}
                       </div>
                     </div>
                   </li>

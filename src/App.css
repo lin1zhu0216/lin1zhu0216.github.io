@@ -231,6 +231,14 @@
   gap: 28px;
 }
 
+.publication-note {
+  margin: -8px 0 18px;
+  color: #737d79;
+  font-family: Arial, sans-serif;
+  font-size: 0.82rem;
+  line-height: 1.4;
+}
+
 .publication-subheading {
   margin: 0 0 8px;
   color: #26312d;
@@ -321,6 +329,13 @@
   font-size: 0.84rem;
   font-weight: 770;
   line-height: 1.38;
+}
+
+.publication__venue-acronym {
+  color: #124f95;
+  font-family: Georgia, "Times New Roman", serif;
+  font-style: italic;
+  font-weight: 700;
 }
 
 .publication__links {

@@ -93,7 +93,7 @@ export function ProfileIntro() {
   return (
     <section className="profile-intro" id="bio" aria-labelledby="bio-title">
       <div className="profile-card" aria-label="Profile information">
-        <img className="profile-photo" src="/profile.png" alt="Lin ZHU" />
+        <img className="profile-photo" src="/profile.jpg" alt="Lin ZHU" />
 
         <p className="profile-email">{profile.emailText}</p>
 

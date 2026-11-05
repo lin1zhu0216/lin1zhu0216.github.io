@@ -40,7 +40,7 @@ export const publicationSections: PublicationSection[] = [
           "The 29th International Conference on Artificial Intelligence and Statistics (AISTATS) 2026.",
         links: [
           { label: "arxiv", href: "https://arxiv.org/abs/2505.11111" },
-          { label: "code", href: "https://github.com/ZhuMuMu0216/FairSHAP" },
+          { label: "code", href: "https://github.com/lin1zhu0216/FairSHAP" },
         ],
       },
       {

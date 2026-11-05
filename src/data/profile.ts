@@ -4,7 +4,7 @@ export const profile = {
   emailText: 'lin.1.zhu@aalto.fi',
   contactLinks: [
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/lin-zhu-51a13228b/' },
-    { label: 'GitHub', href: 'https://github.com/ZhuMuMu0216' },
+    { label: 'GitHub', href: 'https://github.com/lin1zhu0216' },
     {
       label: 'Google Scholar',
       href: 'https://scholar.google.com/citations?user=1K7pxVoAAAAJ&hl=en',
